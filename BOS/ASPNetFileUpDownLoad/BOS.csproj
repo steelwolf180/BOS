@@ -71,6 +71,9 @@
     <Content Include="SendMail.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Subscription.aspx" />
+    <Content Include="SubscriptionDetails.aspx" />
+    <Content Include="SubscriptionDetails2.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -140,8 +143,30 @@
     <Compile Include="SendMail.aspx.designer.cs">
       <DependentUpon>SendMail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Subscription.aspx.cs">
+      <DependentUpon>Subscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Subscription.aspx.designer.cs">
+      <DependentUpon>Subscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubscriptionDetails.aspx.cs">
+      <DependentUpon>SubscriptionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubscriptionDetails.aspx.designer.cs">
+      <DependentUpon>SubscriptionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubscriptionDetails2.aspx.cs">
+      <DependentUpon>SubscriptionDetails2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubscriptionDetails2.aspx.designer.cs">
+      <DependentUpon>SubscriptionDetails2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\Email.cs" />
     <Compile Include="Utilities\FileUtilities.cs" />
+    <Compile Include="Utilities\Subscription.cs" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

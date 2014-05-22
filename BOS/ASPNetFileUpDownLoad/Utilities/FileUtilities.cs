@@ -85,8 +85,7 @@ namespace ASPNetFileUpDownLoad.Utilities
         }
 
         // Save a file into the database
-        public static void SaveFile(string name, string contentType,
-            int size, byte[] data, string user)
+        public static void SaveFile(string name, string contentType, int size, byte[] data, string user)
         {
             using (SqlConnection connection = new SqlConnection())
             {
