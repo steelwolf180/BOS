@@ -10,7 +10,7 @@
 namespace ASPNetFileUpDownLoad {
     
     
-    public partial class SubscriptionDetails {
+    public partial class UserSubscription {
         
         /// <summary>
         /// form1 control.
@@ -22,85 +22,58 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lblKeyword1 control.
+        /// DGV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblKeyword1;
+        protected global::System.Web.UI.WebControls.GridView DGV;
         
         /// <summary>
-        /// tbKW1 control.
+        /// lblID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKW1;
+        protected global::System.Web.UI.WebControls.Label lblID;
         
         /// <summary>
-        /// lblKeyword2 control.
+        /// txtMemberID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblKeyword2;
+        protected global::System.Web.UI.WebControls.TextBox txtMemberID;
         
         /// <summary>
-        /// tbKW2 control.
+        /// BtnReturn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKW2;
+        protected global::System.Web.UI.WebControls.Button BtnReturn;
         
         /// <summary>
-        /// lblKeyword3 control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblKeyword3;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
-        /// tbKW3 control.
+        /// BtnExit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKW3;
-        
-        /// <summary>
-        /// btnSubmit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
-        
-        /// <summary>
-        /// btnReturn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReturn;
-        
-        /// <summary>
-        /// btnExit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExit;
+        protected global::System.Web.UI.WebControls.Button BtnExit;
         
         /// <summary>
         /// lblError control.

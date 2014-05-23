@@ -21,38 +21,37 @@ namespace ASPNetFileUpDownLoad
             try
             {
                 option = int.Parse(RBLPlans.SelectedValue);
-
+                
                 switch (option)
                 {
                     case 1:
                         Session.Add("ContractTypeID", option);
                         Session.Add("Period", 6);
-                        Session.Add("StartDate", DateTime.Today);
-                        Session.Add("EndDate", DateTime.Today.AddMonths(6));
-                        Response.Redirect("SubscriptionDetails");
+                        Session.Add("StartDate", DateTime.Today.ToShortDateString());
+                        Session.Add("EndDate", DateTime.Today.AddMonths(6).ToShortDateString());
+                        Response.Redirect("SubscriptionDetails.aspx");
                         break;
                     case 2:
                         Session.Add("ContractTypeID", option);
                         Session.Add("Period", 12);
-                        Session.Add("StartDate", DateTime.Today);
-                        Session.Add("EndDate", DateTime.Today.AddMonths(12));
-                        Response.Redirect("SubscriptionDetails");
+                        Session.Add("StartDate", DateTime.Today.ToShortDateString());
+                        Session.Add("EndDate", DateTime.Today.AddMonths(12).ToShortDateString());
+                        Response.Redirect("SubscriptionDetails.aspx");
                         break;
                     case 3:
                         Session.Add("ContractTypeID", option);
                         Session.Add("Period", 6);
-                        Session.Add("StartDate", DateTime.Today);
-                        Session.Add("EndDate", DateTime.Today.AddMonths(6));
-                        Response.Redirect("SubscriptionDetails2");
+                        Session.Add("StartDate", DateTime.Today.ToShortDateString());
+                        Session.Add("EndDate", DateTime.Today.AddMonths(6).ToShortDateString());
+                        Response.Redirect("SubscriptionDetails2.aspx");
                         break;
                     case 4:
                         Session.Add("ContractTypeID", option);
                         Session.Add("Period", 12);
-                        Session.Add("StartDate", DateTime.Today);
-                        Session.Add("EndDate", DateTime.Today.AddMonths(12));
-                        Response.Redirect("SubscriptionDetails2");
-                        break;
-                
+                        Session.Add("StartDate", DateTime.Today.ToShortDateString());
+                        Session.Add("EndDate", DateTime.Today.AddMonths(12).ToShortDateString());
+                        Response.Redirect("SubscriptionDetails2.aspx");
+                        break;                
                 }
             }
             catch (Exception ex)

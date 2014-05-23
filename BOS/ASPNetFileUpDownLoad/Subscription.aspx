@@ -19,8 +19,11 @@
                 <asp:ListItem Value="4">BOS Premium For 12 Months</asp:ListItem>
             </asp:RadioButtonList>
             <br />
-     <asp:Button ID="btnReturn" runat="server" Font-Bold="True" OnClick="btnReturn_Click" Text="Return" />
-&nbsp;<asp:Button ID="btnSubmit" runat="server" Font-Bold="True" OnClick="btnSubmit_Click1" Text="Submit" />
+&nbsp;<asp:Button ID="btnSubmit" runat="server" Font-Bold="True" OnClick="btnSubmit_Click1" Text="Submit" Width="75px" />
+     &nbsp;&nbsp;
+     <asp:Button ID="btnReturn" runat="server" Font-Bold="True" OnClick="btnReturn_Click" Text="Return" Width="75px" />
+     &nbsp;&nbsp;
+     <asp:Button ID="btnExit" runat="server" Font-Bold="True" Text="Exit" Width="75px" />
      <br />
      <br />
      <asp:Label ID="lblError" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>

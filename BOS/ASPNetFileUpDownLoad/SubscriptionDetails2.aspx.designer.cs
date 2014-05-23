@@ -10,16 +10,16 @@
 namespace ASPNetFileUpDownLoad {
     
     
-    public partial class SubscriptionDetails {
+    public partial class SubscriptionDetails2 {
         
         /// <summary>
-        /// form1 control.
+        /// form2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
         
         /// <summary>
         /// lblKeyword1 control.
@@ -31,13 +31,13 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Label lblKeyword1;
         
         /// <summary>
-        /// tbKeyword1 control.
+        /// tbKW1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKeyword1;
+        protected global::System.Web.UI.WebControls.TextBox tbKW1;
         
         /// <summary>
         /// lblKeyword2 control.
@@ -49,13 +49,13 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Label lblKeyword2;
         
         /// <summary>
-        /// tbKeyword2 control.
+        /// tbKW2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKeyword2;
+        protected global::System.Web.UI.WebControls.TextBox tbKW2;
         
         /// <summary>
         /// lblKeyword3 control.
@@ -67,13 +67,13 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Label lblKeyword3;
         
         /// <summary>
-        /// tbKeyword3 control.
+        /// tbKW3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKeyword3;
+        protected global::System.Web.UI.WebControls.TextBox tbKW3;
         
         /// <summary>
         /// lblKeyword4 control.
@@ -85,13 +85,13 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Label lblKeyword4;
         
         /// <summary>
-        /// tbKeyword4 control.
+        /// tbKW4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKeyword4;
+        protected global::System.Web.UI.WebControls.TextBox tbKW4;
         
         /// <summary>
         /// lblKeyword5 control.
@@ -103,13 +103,13 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Label lblKeyword5;
         
         /// <summary>
-        /// tbKeyword5 control.
+        /// tbKW5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKeyword5;
+        protected global::System.Web.UI.WebControls.TextBox tbKW5;
         
         /// <summary>
         /// lblKeyword6 control.
@@ -121,13 +121,13 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Label lblKeyword6;
         
         /// <summary>
-        /// tbKeyword6 control.
+        /// tbKW6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKeyword6;
+        protected global::System.Web.UI.WebControls.TextBox tbKW6;
         
         /// <summary>
         /// lblKeyword7 control.
@@ -139,13 +139,13 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Label lblKeyword7;
         
         /// <summary>
-        /// tbKeyword7 control.
+        /// tbKW7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKeyword7;
+        protected global::System.Web.UI.WebControls.TextBox tbKW7;
         
         /// <summary>
         /// lblKeyword8 control.
@@ -157,13 +157,13 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Label lblKeyword8;
         
         /// <summary>
-        /// tbKeyword8 control.
+        /// tbKW8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKeyword8;
+        protected global::System.Web.UI.WebControls.TextBox tbKW8;
         
         /// <summary>
         /// lblKeyword9 control.
@@ -175,13 +175,13 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Label lblKeyword9;
         
         /// <summary>
-        /// tbKeyword9 control.
+        /// tbKW9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKeyword9;
+        protected global::System.Web.UI.WebControls.TextBox tbKW9;
         
         /// <summary>
         /// lblKeyword10 control.
@@ -193,13 +193,22 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Label lblKeyword10;
         
         /// <summary>
-        /// tbKeyword10 control.
+        /// tbKW10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKeyword10;
+        protected global::System.Web.UI.WebControls.TextBox tbKW10;
+        
+        /// <summary>
+        /// btnSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
         
         /// <summary>
         /// btnReturn control.
@@ -211,12 +220,21 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Button btnReturn;
         
         /// <summary>
-        /// btnSubmit control.
+        /// btnExit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
+        protected global::System.Web.UI.WebControls.Button btnExit;
+        
+        /// <summary>
+        /// lblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError;
     }
 }

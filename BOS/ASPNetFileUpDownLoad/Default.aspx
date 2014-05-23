@@ -48,9 +48,10 @@
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
         <br />
-        <asp:Button ID="DeleteUser" runat="server" Font-Bold="True" OnClick="DeleteUser_Click" Text="Delete User" />
+        <asp:Button ID="btnUser" runat="server" Font-Bold="True" OnClick="btnUser_Click" Text="User" Width="112px" />
+&nbsp;<asp:Button ID="btnSub" runat="server" Font-Bold="True" OnClick="btnSub_Click" Text="Subscription" Width="112px" />
 &nbsp;<asp:Button ID="btnExit" runat="server" Font-Bold="True" 
-            onclick="btnExit_Click" Text="Exit" Width="81px" />
+            onclick="btnExit_Click" Text="Exit" Width="112px" />
     </div>
 </div>
 </form>

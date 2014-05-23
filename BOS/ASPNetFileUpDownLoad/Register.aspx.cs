@@ -62,9 +62,10 @@ namespace ASPNetFileUpDownLoad
                                     company = txtCompany.Text;
                                     hp = txtHP.Text ;
 
+                                    Session["User"] = username;
                                     // call database to insert into database
                                     Utilities.FileUtilities.AccountCreation(username, password, email, company, hp);
-                                    Response.Redirect("Login.aspx");
+                                    Response.Redirect("Subscription.aspx");
                                 }
                             }
                         }

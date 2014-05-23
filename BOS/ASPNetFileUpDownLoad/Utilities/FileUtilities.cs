@@ -194,7 +194,7 @@ namespace ASPNetFileUpDownLoad.Utilities
                 cmd.Connection = connection;
                 cmd.CommandTimeout = 0;
 
-                cmd.CommandText = "Insert Into Account (Username, Password, Email, Company, HP, Type) Values(@username, @password, @email, @company, @hp, 2)";
+                cmd.CommandText = "Insert Into Account (Username, Password, Email, Company, HP, Type) Values(@username, @password, @email, @company, @hp, 1)";
                 cmd.CommandType = CommandType.Text;
 
                 cmd.Parameters.Add("@username", SqlDbType.VarChar);

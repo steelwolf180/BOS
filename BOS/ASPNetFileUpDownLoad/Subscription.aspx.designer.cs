@@ -31,6 +31,15 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.RadioButtonList RBLPlans;
         
         /// <summary>
+        /// btnSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
+        
+        /// <summary>
         /// btnReturn control.
         /// </summary>
         /// <remarks>
@@ -40,13 +49,13 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Button btnReturn;
         
         /// <summary>
-        /// btnSubmit control.
+        /// btnExit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
+        protected global::System.Web.UI.WebControls.Button btnExit;
         
         /// <summary>
         /// lblError control.

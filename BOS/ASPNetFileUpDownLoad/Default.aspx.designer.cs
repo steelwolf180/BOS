@@ -49,13 +49,22 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.GridView gvFiles;
         
         /// <summary>
-        /// DeleteUser control.
+        /// btnUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button DeleteUser;
+        protected global::System.Web.UI.WebControls.Button btnUser;
+        
+        /// <summary>
+        /// btnSub control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSub;
         
         /// <summary>
         /// btnExit control.

@@ -58,9 +58,14 @@ namespace ASPNetFileUpDownLoad
             Response.Redirect("Login.aspx");
         }
 
-        protected void DeleteUser_Click(object sender, EventArgs e)
+        protected void btnUser_Click(object sender, EventArgs e)
         {
-            Response.Redirect("DeleteUser.aspx");
+            Response.Redirect("User.aspx");
+        }
+
+        protected void btnSub_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserSubscription.aspx");
         }
     }
 }

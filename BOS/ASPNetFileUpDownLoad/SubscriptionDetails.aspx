@@ -29,9 +29,18 @@
         <asp:TextBox ID="tbKW3" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="btnReturn" runat="server" Font-Bold="True" Text="Return" OnClick="btnReturn_Click" />
 &nbsp;
-        <asp:Button ID="btnSubmit" runat="server" Font-Bold="True" Text="Submit" OnClick="btnSubmit_Click" />
+        <asp:Button ID="btnSubmit" runat="server" Font-Bold="True" Text="Submit" OnClick="btnSubmit_Click" Width="75px" />
+    
+        &nbsp;
+    
+        &nbsp;<asp:Button ID="btnReturn" runat="server" Font-Bold="True" Text="Return" OnClick="btnReturn_Click" Width="75px" />
+    
+        &nbsp;&nbsp;
+        <asp:Button ID="btnExit" runat="server" Font-Bold="True" OnClick="btnExit_Click" Text="Exit" Width="75px" />
+    
+        <br />
+        <asp:Label ID="lblError" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
     
     </div>
     </form>

@@ -1,22 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeleteUser.aspx.cs" Inherits="ASPNetFileUpDownLoad.DeleteUser" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserSubscription.aspx.cs" Inherits="ASPNetFileUpDownLoad.UserSubscription" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div align ="center">
+<div align ="center">
     
         <br />
-<span class="auto-style1"><strong>Delete User From Below<br />
+<span class="auto-style1"><strong>Delete Subscription From Below<br />
         </strong></span>
         <br />
     
@@ -40,11 +35,11 @@
 &nbsp;<asp:TextBox ID="txtMemberID" runat="server" Width="75px"></asp:TextBox>
         <br />
         <br />
-&nbsp;&nbsp;&nbsp;<asp:Button ID="BtnReturn" runat="server" Font-Bold="True" OnClick="BtnReturn_Click" Text="Return" />
+&nbsp;&nbsp;&nbsp;<asp:Button ID="BtnReturn" runat="server" Font-Bold="True" OnClick="BtnReturn_Click" Text="Return" Width="75px" />
 &nbsp;&nbsp;
-        <asp:Button ID="btnDelete" runat="server" Text="Delete" Font-Bold="True" OnClick="btnDelete_Click" />
+        <asp:Button ID="btnDelete" runat="server" Text="Delete" Font-Bold="True" OnClick="btnDelete_Click" Width="75px" />
 &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="BtnExit" runat="server" Font-Bold="True" OnClick="BtnExit_Click" Text="Exit" Width="70px" />
+        <asp:Button ID="BtnExit" runat="server" Font-Bold="True" OnClick="BtnExit_Click" Text="Exit" Width="75px" />
     
         <br />
         <br />

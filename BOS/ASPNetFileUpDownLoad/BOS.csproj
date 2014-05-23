@@ -62,7 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="DeleteUser.aspx" />
+    <Content Include="User.aspx" />
     <Content Include="Download.aspx" />
     <Content Include="GetFile.aspx" />
     <Content Include="Login.aspx" />
@@ -74,6 +74,7 @@
     <Content Include="Subscription.aspx" />
     <Content Include="SubscriptionDetails.aspx" />
     <Content Include="SubscriptionDetails2.aspx" />
+    <Content Include="UserSubscription.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -90,12 +91,12 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DeleteUser.aspx.cs">
-      <DependentUpon>DeleteUser.aspx</DependentUpon>
+    <Compile Include="User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DeleteUser.aspx.designer.cs">
-      <DependentUpon>DeleteUser.aspx</DependentUpon>
+    <Compile Include="User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
     </Compile>
     <Compile Include="Download.aspx.cs">
       <DependentUpon>Download.aspx</DependentUpon>
@@ -163,6 +164,13 @@
     </Compile>
     <Compile Include="SubscriptionDetails2.aspx.designer.cs">
       <DependentUpon>SubscriptionDetails2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserSubscription.aspx.cs">
+      <DependentUpon>UserSubscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserSubscription.aspx.designer.cs">
+      <DependentUpon>UserSubscription.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utilities\Email.cs" />
     <Compile Include="Utilities\FileUtilities.cs" />
