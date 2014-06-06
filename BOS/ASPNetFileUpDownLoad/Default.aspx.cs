@@ -39,11 +39,10 @@ namespace ASPNetFileUpDownLoad
                         string name = file.FileName;
                         int position = name.LastIndexOf("\\");
                         name = name.Substring(position + 1);
-                        string contentType = file.ContentType;
                         byte[] fileData = new byte[size];
                         file.InputStream.Read(fileData, 0, size);
 
-                        FileUtilities.SaveFile(name, contentType, size, fileData, user);
+                        FileUtilities.SaveFile(name, size, fileData, user);
                     }
                 }
 

@@ -29,7 +29,7 @@ namespace ASPNetFileUpDownLoad.Utilities
                 cmd.Connection = connection;
                 cmd.CommandTimeout = 0;
 
-                cmd.CommandText = "SELECT ID, Name, ContentType, Size, Date FROM Files";
+                cmd.CommandText = "SELECT ID, Name, Size, Date FROM Files";
                 cmd.CommandType = CommandType.Text;
                 SqlDataAdapter adapter = new SqlDataAdapter();
 
@@ -85,7 +85,7 @@ namespace ASPNetFileUpDownLoad.Utilities
         }
 
         // Save a file into the database
-        public static void SaveFile(string name, string contentType, int size, byte[] data, string user)
+        public static void SaveFile(string name, int size, byte[] data, string user)
         {
             using (SqlConnection connection = new SqlConnection())
             {
@@ -97,20 +97,18 @@ namespace ASPNetFileUpDownLoad.Utilities
                 DateTime myDateTime = DateTime.Now;
                 string sqlFormattedDate = myDateTime.ToString("dd-M-yyyy");
 
-                string commandText = "INSERT INTO Files VALUES(@Name, @ContentType, ";
+                string commandText = "INSERT INTO Files VALUES(@Name,";
                 commandText = commandText + "@Size, @Data, @Date, @User)";
                 cmd.CommandText = commandText;
                 cmd.CommandType = CommandType.Text;
 
                 cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 100);
-                cmd.Parameters.Add("@ContentType", SqlDbType.VarChar, 50);
                 cmd.Parameters.Add("@size", SqlDbType.Int);
                 cmd.Parameters.Add("@Data", SqlDbType.VarBinary);
                 cmd.Parameters.Add("@Date", SqlDbType.Date);
                 cmd.Parameters.Add("@User", SqlDbType.VarChar);
 
                 cmd.Parameters["@Name"].Value = name;
-                cmd.Parameters["@ContentType"].Value = contentType;
                 cmd.Parameters["@size"].Value = size;
                 cmd.Parameters["@Data"].Value = data;
                 cmd.Parameters["@Date"].Value = sqlFormattedDate;

@@ -16,25 +16,40 @@ namespace Selenium
 {
     class Program
     {
-        static void LoadFile(ref List<string> l)
+        static void LoadFile(ref List<string> l, ref Dictionary<string,string> dict)
         {
             try
             {
                 //declare variable
                 string line;
+                List<string> listStrLineElements = new List<string>();
                 //calling steamreader and reading the numbers from Numbers.txt
-                StreamReader reader = new StreamReader("Keywords.txt");
-                while (true)
+                using (StreamReader sr = new StreamReader("Keywords.txt"))
                 {
-                    //reading it line by line
-                    line = reader.ReadLine();
-                    //break the while loop when it encounters a blank line
-                    if (line == null)
+                    while ((line = sr.ReadLine()) != null)
                     {
-                        break;
+                        if (line == null)
+                        {
+                            break;
+                        }
+                        #region Split into name and keywords from the input file 
+                        listStrLineElements = line.Split(',').ToList();
+                        for (int i = 0; i < listStrLineElements.Count; i++)
+                        {
+                            switch (i)
+                            {
+                                case 0:
+                                    l.Add(listStrLineElements[i]);
+                                    break;
+                                case 1:
+                                    dict.Add(listStrLineElements[(i-1)], listStrLineElements[i]);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                        #endregion
                     }
-                    //adding the number to list l
-                    l.Add(line);
                 }
             }
             catch (Exception LoadFile)
@@ -52,10 +67,10 @@ namespace Selenium
             return FileName;
         }
 
-        public static void ExportData(string targetFilename, ref List<string> q, ref List<string> d, ref List<string> e, ref List<string> sd, ref List<string> st)
+        public static void ExportData(string targetFilename, ref List<string> q, ref List<string> d, ref List<string> e, ref List<string> sd, ref List<string> st, ref List<string> name, ref List<string> kw)
         {
             //  Step 1: Create a DataSet, and put some sample data in it
-            DataSet ds = BillInfo(ref q, ref d, ref e, ref sd, ref st);
+            DataSet ds = BillInfo(ref q, ref d, ref e, ref sd, ref st, ref name, ref kw);
 
             //  Step 2: Create the Excel file
             try
@@ -69,7 +84,7 @@ namespace Selenium
             }
         }
 
-        private static DataSet BillInfo(ref List<string> q, ref List<string> d, ref List<string> e, ref List<string> sd, ref List<string> st)
+        private static DataSet BillInfo(ref List<string> q, ref List<string> d, ref List<string> e, ref List<string> sd, ref List<string> st, ref List<string> name, ref List<string> kw)
         {
             //creates a dataset
             DataSet ds = new DataSet();
@@ -84,11 +99,13 @@ namespace Selenium
             dt1.Columns.Add("Entity Name", Type.GetType("System.String"));
             dt1.Columns.Add("Submission Date", Type.GetType("System.String"));
             dt1.Columns.Add("Submission Time", Type.GetType("System.String"));
+            dt1.Columns.Add("Username", Type.GetType("System.String"));
+            dt1.Columns.Add("Keyword", Type.GetType("System.String"));
   
             //adding rows of record that is extracted
             for (int i = 0; i < q.Count; i++)
             {
-                dt1.Rows.Add(new object[] { i + 1, q[i], d[i], e[i], sd[i], st[i] });
+                dt1.Rows.Add(new object[] { i + 1, q[i], d[i], e[i], sd[i], st[i], name[i], kw[i] });
             }
 
             //adds every rows and columns to the excel sheet
@@ -102,13 +119,16 @@ namespace Selenium
         {
            
                 //Declaration 
-                //l = phone numbers, quotation number, desc of the records, entity, submission date , submission time
+                //l = phone numbers, quotation number, desc of the records, entity, submission date , submission time, name of user
                 List<string> l = new List<string>();
                 List<string> quotation = new List<string>();
                 List<string> desc = new List<string>();
                 List<string> entity = new List<string>();
                 List<string> subDate = new List<string>();
                 List<string> subTime = new List<string>();
+                List<string> name = new List<string>();
+                List<string> kw = new List<string>();
+                Dictionary<string, string> dict = new Dictionary<string, string>();
                 int numbrecords = 0;
                 string filename = "";
                 
@@ -116,7 +136,7 @@ namespace Selenium
                 // Initialize the Chrome Driver
                 using (var driver = new ChromeDriver())
                 {
-                    LoadFile(ref l);
+                    LoadFile(ref l, ref dict);
                     
                     // Go to the home page
                     driver.Navigate().GoToUrl("http://www.gebiz.gov.sg/scripts/main.do?sourceLocation=openarea&select=tenderId");
@@ -160,6 +180,8 @@ namespace Selenium
                                         entity.Add(driver.FindElementByXPath("/html/body/table[2]/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr["+ i +"]/td[3]/table/tbody/tr[2]/td").Text);
                                         subDate.Add(driver.FindElementByXPath("/html/body/table[2]/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr["+ i +"]/td[5]/table/tbody/tr[1]/td").Text);
                                         subTime.Add(driver.FindElementByXPath("/html/body/table[2]/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr["+ i +"]/td[5]/table/tbody/tr[2]/td").Text);
+                                        name.Add(dict[val]);
+                                        kw.Add(val);
                                     }
                                     driver.Navigate().GoToUrl("http://www.gebiz.gov.sg/scripts/main.do?sourceLocation=openarea&select=tenderId");
                                     break;
@@ -175,7 +197,7 @@ namespace Selenium
                 //saving to excel file
                 filename = SaveExcel();
 
-                ExportData(filename, ref quotation, ref desc, ref entity, ref subDate, ref subTime);
+                ExportData(filename, ref quotation, ref desc, ref entity, ref subDate, ref subTime, ref name, ref kw);
             
         }
     }
