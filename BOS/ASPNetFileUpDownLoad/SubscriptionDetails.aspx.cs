@@ -10,14 +10,12 @@ namespace ASPNetFileUpDownLoad
     public partial class SubscriptionDetails : System.Web.UI.Page
     {
         string keyword1, keyword2, keyword3;
-        bool renewal;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             keyword1 = "";
             keyword2 = "";
             keyword3 = "";
-            renewal = false;
         }
 
         protected void btnReturn_Click(object sender, EventArgs e)
@@ -29,14 +27,10 @@ namespace ASPNetFileUpDownLoad
         {
             try
             {
-                renewal = (bool)(Session["Renewal"]);
-                string Username = (string)(Session["User"]);
-                int ContracttypeID = (int)(Session["ContractTypeID"]);
-                int Period = (int)(Session["Period"]);
-                string sDate = (string)(Session["StartDate"]);
-                string eDate = (string)(Session["EndDate"]);
-                int UserID = 0, SubID = 0;
-
+                bool renewal = (bool)(Session["Renewal"]);             
+                int UserID = 0, SubID = 0, ContracttypeID = (int)(Session["ContractTypeID"]), Period = (int)(Session["Period"]);
+                string Username = (string)(Session["User"]), sDate = (string)(Session["StartDate"]), eDate = (string)(Session["EndDate"]), email = (string)(Session["Email"]);
+                                
                 if (tbKW1.Text.Length == 0 || tbKW2.Text.Length == 0 || tbKW3.Text.Length == 0)
                 {
                     lblError.Text = "Please enter all your keywords";
@@ -48,15 +42,17 @@ namespace ASPNetFileUpDownLoad
                     keyword3 = tbKW3.Text;
 
                     UserID = Utilities.Subscription.GetAccountID(Username);
-                    SubID = Utilities.Subscription.GetSubscriptionID(UserID);
 
                     if (renewal == true)
                     {
+                        SubID = Utilities.Subscription.GetSubscriptionID(UserID);                        
                         Utilities.Subscription.Renewal3KW(SubID,UserID, keyword1, keyword2, keyword3, ContracttypeID, Period, sDate, eDate);
+                        Utilities.Email.AccountRenewal(email, Username);
                     }
                     else
                     {
                         Utilities.Subscription.Subscription3KW(UserID, keyword1, keyword2, keyword3, ContracttypeID, Period, sDate, eDate);
+                        Utilities.Email.AccoountCreation(email, Username);
                     }                    
                     Response.Redirect("Login.aspx");
                 }

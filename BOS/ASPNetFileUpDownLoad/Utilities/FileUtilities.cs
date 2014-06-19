@@ -53,7 +53,7 @@ namespace ASPNetFileUpDownLoad.Utilities
                 cmd.Connection = connection;
                 cmd.CommandTimeout = 0;
 
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd.CommandText = "SELECT ID, Name, ContentType, Size, Date FROM Files Where U='" + user + "'", connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd.CommandText = "SELECT ID, Name, Size, Date FROM Files Where U='" + user + "'", connection);
                 cmd.CommandType = CommandType.Text;
                 adapter.Fill(fileList);
 

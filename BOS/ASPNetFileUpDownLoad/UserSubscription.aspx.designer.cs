@@ -58,6 +58,15 @@ namespace ASPNetFileUpDownLoad {
         protected global::System.Web.UI.WebControls.Button BtnReturn;
         
         /// <summary>
+        /// btnRenewal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRenewal;
+        
+        /// <summary>
         /// btnDelete control.
         /// </summary>
         /// <remarks>

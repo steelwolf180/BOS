@@ -61,5 +61,11 @@ namespace ASPNetFileUpDownLoad
         {
             Response.Redirect("Login.aspx");
         }
+
+        protected void btnRenewal_Click(object sender, EventArgs e)
+        {
+            Session["Renewal"] = true;
+            Response.Redirect("Subscription.aspx");
+        }
     }
 }

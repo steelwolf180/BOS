@@ -36,7 +36,9 @@
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;<asp:Button ID="BtnReturn" runat="server" Font-Bold="True" OnClick="BtnReturn_Click" Text="Return" Width="75px" />
-&nbsp;&nbsp;
+&nbsp;
+        <asp:Button ID="btnRenewal" runat="server" Font-Bold="True" OnClick="btnRenewal_Click" Text="Renewal" />
+        &nbsp;&nbsp;
         <asp:Button ID="btnDelete" runat="server" Text="Delete" Font-Bold="True" OnClick="btnDelete_Click" Width="75px" />
 &nbsp;&nbsp;&nbsp;
         <asp:Button ID="BtnExit" runat="server" Font-Bold="True" OnClick="BtnExit_Click" Text="Exit" Width="75px" />

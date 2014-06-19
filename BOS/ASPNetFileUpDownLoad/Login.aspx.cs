@@ -46,6 +46,7 @@ namespace ASPNetFileUpDownLoad
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
+            Session["Renewal"] = false;
             Response.Redirect("Register.aspx");
         }
 

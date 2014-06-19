@@ -7,6 +7,7 @@ namespace ASPNetFileUpDownLoad.Utilities
 {
     public class Subscription
     {
+        #region Database Connection
         private static string GetConnectionString()
         {
             return ConfigurationManager.AppSettings["DBConnectionString"];
@@ -18,7 +19,9 @@ namespace ASPNetFileUpDownLoad.Utilities
             connection.Open();
         }
 
-        #region Subscription Details
+        #endregion
+
+        #region Account Details
         public static int GetAccountID(string username)
         {
             int ID = 0;
@@ -42,14 +45,50 @@ namespace ASPNetFileUpDownLoad.Utilities
                 {
                     if (reader.HasRows)
                     {
-                        ID = int.Parse(reader["ID"].ToString());                        
+                        ID = int.Parse(reader["ID"].ToString());
                     }
                 }
                 connection.Close();
                 return ID;
-               
+
             }
         }
+
+        public static string GetAccountEmail(int AccountID)
+        {
+            string Email = "";
+
+            using (SqlConnection connection = new SqlConnection())
+            {
+                OpenConnection(connection);
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandTimeout = 0;
+
+                cmd.CommandText = "Select Email From Account Where ID=@id";
+                cmd.CommandType = CommandType.Text;
+
+                cmd.Parameters.Add("@id", SqlDbType.Int);
+                cmd.Parameters["@id"].Value = AccountID;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if (reader.HasRows)
+                    {
+                        Email = reader["Email"].ToString();
+                    }
+                }
+                connection.Close();
+                return Email;
+
+            }
+        }
+
+        #endregion
+
+        #region Subscription Details
 
         public static int GetSubscriptionID(int AccountID)
         {
