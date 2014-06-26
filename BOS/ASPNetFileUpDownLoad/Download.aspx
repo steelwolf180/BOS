@@ -89,8 +89,6 @@
             </Columns>
         </asp:GridView>
             <br />
-            <asp:Button ID="btnRenewal" runat="server" Font-Bold="True" OnClick="btnRenewal_Click" Text="Subscription Renewal" Visible="False" />
-            <br />
             <br />
             <asp:Button ID="btnExit" runat="server" Font-Bold="True" 
                 onclick="btnExit_Click" Text="Exit" />
