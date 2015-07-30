@@ -174,37 +174,47 @@ namespace Selenium
                         }
                         else
                         {
-                            #region Checking the number of records
-                            for (int j = 11; j > 1; j--)
+
+                            if (driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[2]/td").Text.Equals("No data found"))
                             {
-                                //select the records by row
-                                if (driver.FindElements(By.XPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr["+j+"]")).Count == 1)
-                                {
-                                    numbrecords = j-1;
-                                    #region Storing quotation and desc to list
-                                    for (int i = 2; i == j; i++)
-                                    {
-                                        //get the record from the current row on the quotation col 
-                                        quotation.Add(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr["+ i +"]/td[2]/table/tbody/tr[1]/td/a/b").Text);
-                                        //get the record from the current row on the description col 
-                                        desc.Add(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr["+ i +"]/td[3]/table/tbody/tr[1]/td").Text);
-                                        //get the record from the current row on entity from description col
-                                        entity.Add(RemoveWord(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[" + i + "]/td[3]/table/tbody/tr[2]/td").Text));
-                                        //get the record from the current row on submission date from closing date/time col
-                                        subDate.Add(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr["+ i +"]/td[5]/table/tbody/tr[1]/td").Text);
-                                        //get the record from the current row on submission time from closing date/time col
-                                        subTime.Add(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr["+ i +"]/td[5]/table/tbody/tr[2]/td").Text);
-                                        //add the name of the organisation that the keyword belong to 
-                                        name.Add(dict[val]);
-                                        //add the keyword
-                                        kw.Add(val);
-                                    }
-                                    driver.Navigate().GoToUrl("http://www.gebiz.gov.sg/scripts/main.do?sourceLocation=openarea&select=tenderId");
-                                    break;
-                                    #endregion                                     
-                                }
+                                Console.WriteLine("No Data Found");
                             }
-                            #endregion
+                            else
+                            {
+                                #region Checking the number of records
+                                for (int j = 11; j > 1; j--)
+                                {
+                                    //select the records by row
+                                    if (driver.FindElements(By.XPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[" + j + "]")).Count == 1)
+                                    {
+                                        Console.WriteLine(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[2]/td").Text);
+                                        numbrecords = j - 1;
+                                        #region Storing quotation and desc to list
+                                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(2));
+                                        for (int i = 2; i == j; i++)
+                                        {
+                                            //get the record from the current row on the quotation col 
+                                            quotation.Add(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[" + i + "]/td[2]/table/tbody/tr[1]/td/a/b").Text);
+                                            //get the record from the current row on the description col 
+                                            desc.Add(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[" + i + "]/td[3]/table/tbody/tr[1]/td").Text);
+                                            //get the record from the current row on entity from description col
+                                            entity.Add(RemoveWord(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[" + i + "]/td[3]/table/tbody/tr[2]/td").Text));
+                                            //get the record from the current row on submission date from closing date/time col
+                                            subDate.Add(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[" + i + "]/td[5]/table/tbody/tr[1]/td").Text);
+                                            //get the record from the current row on submission time from closing date/time col
+                                            subTime.Add(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[" + i + "]/td[5]/table/tbody/tr[2]/td").Text);
+                                            //add the name of the organisation that the keyword belong to 
+                                            name.Add(dict[val]);
+                                            //add the keyword
+                                            kw.Add(val);
+                                        }
+                                        driver.Navigate().GoToUrl("http://www.gebiz.gov.sg/scripts/main.do?sourceLocation=openarea&select=tenderId");
+                                        break;
+                                        #endregion
+                                    }
+                                }
+                                #endregion
+                            }
                         }
                     }
                     #endregion
