@@ -37,24 +37,10 @@ Z:\GeBiz\GeBiz ver 3\Selenium\obj\Debug\Selenium.pdb
 C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz ver 3\Selenium\bin\Debug\Selenium.exe.config
 C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz ver 3\Selenium\obj\Debug\Selenium.exe
 C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz ver 3\Selenium\obj\Debug\Selenium.pdb
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\Selenium.exe.config
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\obj\Debug\Selenium.exe
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\obj\Debug\Selenium.pdb
 C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\chromedriver.exe
 C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\Selenium.exe
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\Selenium.pdb
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\DocumentFormat.OpenXml.dll
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\Selenium.WebDriverBackedSelenium.dll
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\ThoughtWorks.Selenium.Core.dll
 C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\WebDriver.dll
 C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\WebDriver.Support.dll
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\WindowsBase.dll
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\DocumentFormat.OpenXml.xml
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\Selenium.WebDriverBackedSelenium.xml
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\ThoughtWorks.Selenium.Core.xml
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\WebDriver.xml
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\WebDriver.Support.xml
-C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\obj\Debug\Selenium.csprojResolveAssemblyReference.cache
 C:\Users\jerrold\Desktop\GeBiz\Selenium\bin\Debug\Selenium.exe.config
 C:\Users\jerrold\Desktop\GeBiz\Selenium\obj\Debug\Selenium.exe
 C:\Users\jerrold\Desktop\GeBiz\Selenium\obj\Debug\Selenium.pdb
@@ -72,3 +58,17 @@ C:\Users\jerrold\Desktop\GeBiz\Selenium\bin\Debug\ThoughtWorks.Selenium.Core.xml
 C:\Users\jerrold\Desktop\GeBiz\Selenium\bin\Debug\WebDriver.xml
 C:\Users\jerrold\Desktop\GeBiz\Selenium\bin\Debug\WebDriver.Support.xml
 C:\Users\jerrold\Desktop\GeBiz\Selenium\obj\Debug\Selenium.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\Selenium.exe.config
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\ThoughtWorks.Selenium.Core.dll
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\WindowsBase.dll
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\ThoughtWorks.Selenium.Core.xml
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\WebDriver.xml
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\WebDriver.Support.xml
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\obj\Debug\Selenium.exe
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\obj\Debug\Selenium.pdb
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\obj\Debug\Selenium.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Documents\GitHub\BOS\GeBiz\Selenium\bin\Debug\Selenium.pdb

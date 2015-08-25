@@ -178,6 +178,7 @@ namespace Selenium
                             if (driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[2]/td").Text.Equals("No data found"))
                             {
                                 Console.WriteLine("No Data Found");
+                                driver.Navigate().GoToUrl("http://www.gebiz.gov.sg/scripts/main.do?sourceLocation=openarea&select=tenderId");
                             }
                             else
                             {
@@ -188,10 +189,9 @@ namespace Selenium
                                     if (driver.FindElements(By.XPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[" + j + "]")).Count == 1)
                                     {
                                         Console.WriteLine(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[2]/td").Text);
-                                        numbrecords = j - 1;
+                                        numbrecords = j + 1;
                                         #region Storing quotation and desc to list
-                                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(2));
-                                        for (int i = 2; i == j; i++)
+                                        for (int i = 2; i < numbrecords; i++)
                                         {
                                             //get the record from the current row on the quotation col 
                                             quotation.Add(driver.FindElementByXPath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/form/table[3]/tbody/tr/td/table[1]/tbody/tr[" + i + "]/td[2]/table/tbody/tr[1]/td/a/b").Text);
